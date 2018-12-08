@@ -1,0 +1,59 @@
+/*==================================================
+===| 07. Input
+===================================================*/
+.form-control {
+  border: 1px solid #e9e8e8;
+  margin-bottom: 20px;
+  padding: 20px 15px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 none;
+  font-size: 14px;
+  font-family: $font-primary;
+
+  &:focus {
+    border-color: #dbdada;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    color: #444;
+  }
+}
+
+.textarea_parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.textarea_parent>textarea:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.textarea_parent>textarea {
+  min-height: 100px;
+}
+
+////////////////////////////////////////////////////
+// Oily Form Control
+// .oily-form-control {
+//   border: 1px solid #dbdbdb;
+//   margin-bottom: 20px;
+//   width: 100%;
+//   padding: 15px;
+//   border-radius: 3px;
+//   font-size: 14px;
+//   &:focus {
+//     border-color: #9b9b9b;
+//     outline: none;
+//   }
+// }
+
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//==| Site Input
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|

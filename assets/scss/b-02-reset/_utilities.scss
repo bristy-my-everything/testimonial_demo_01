@@ -1,0 +1,101 @@
+////////////////////////////////////////////////////
+// Utilities
+.vh-100 {
+  height: 100vh;
+}
+
+.content__box {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include desktop3 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include tab1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.footer-content-box {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.gray-bg {
+  background-color: #F8F9FA;
+}
+
+
+////////////////////////////////////////////////////
+// Selection & Color
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+
+////////////////////////////////////////////////////
+// is-sticky
+.is-sticky {
+  position: relative;
+  z-index: 100000;
+}
+
+
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//==| google-map-1
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+
+// .google-map-1 {
+//   .mapouter {
+//     text-align: right;
+//     height: 500px;
+//     width: 100%;
+//     @include laptop1 {
+//       height: 400px;
+//     }
+//     @include phone1 {
+//       height: 350px;
+//     }
+//     @include phone2 {
+//       height: 300px;
+//     }
+//   }
+//   .gmap_canvas {
+//     overflow: hidden;
+//     background: none !important;
+//     height: 100%;
+//     width: 100%;
+//     iframe {
+//       height: 100%;
+//       width: 100%;
+//       border: none;
+//       overflow: hidden;
+//       margin: 0;
+//     }
+//   }
+// }
+
+
+
+// <!-- |==========================================| -->
+// <!-- |=====|| google-map-1 start ||===============| -->
+// <section class="google-map-1">
+//   <div class="mapouter">
+//     <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Oakland&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://www.pureblack.de">werbeagentur</a></div>
+//   </div>
+// </section>
+// <!-- |=====|| google-map-1 end ||=================| -->
+// <!-- |==========================================| -->
+

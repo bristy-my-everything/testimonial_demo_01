@@ -1,0 +1,297 @@
+/*==================================================
+===| 06. Navbar2
+===================================================*/
+
+// 01. At Fast you need body element to set  id="site-body" data-spy="scroll" data-target=".navbar" data-offset="65"
+// 02. Set HTML codes.
+// 03. Set logo img and Setup (01) id element and (02) navbar ul>li>a  href="#" in HTML
+// 04. And finialy (01) set js code and (02) smooth-scroll || top - 64 (03) set "navbar-01" class in Sticky Js
+
+
+.navbar-01 {
+
+  &__wrapper {
+    padding: 0 85px !important;
+    position: relative;
+
+    @include desktop3 {
+      padding: 0 20px !important;
+    }
+
+    // if you need style navbar img 
+    a {
+
+      img {
+        position: absolute;
+        left: 50px;
+        top: -14px;
+        cursor: pointer;
+        z-index: 100;
+        width: 150px;
+
+        @include laptop1 {
+          width: 100px;
+          top: -5px;
+        }
+
+        @include tab1 {
+          left: 25px;
+        }
+
+        @include phone2 {
+          left: 15px;
+          width: 80px;
+          top: 0px;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    padding: 35px 0px 20px 0px;
+    transition: all .3s linear;
+
+    @include laptop1 {
+      padding: 20px 0px;
+    }
+  }
+
+  ul.navbar-nav>li>a {
+    font-family: $font-display;
+    color: red !important;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s;
+  }
+
+  ul.navbar-nav>li>a:hover,
+  ul.navbar-nav>li>a:focus {
+    background: none !important;
+    color: #fbb431 !important; // need customize
+  }
+
+  // need customize
+  ul.navbar-nav>li.nav-item a.active {
+    color: #fbb431 !important;
+  }
+
+  .navbar-brand {
+    padding: 13px 15px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+.is-sticky #navbar2 {
+  background: #1D1E26;
+  padding: 20px 0;
+  box-shadow: 0 8px 6px -9px #000;
+  z-index: 100;
+
+  @include tab1 {
+    padding: 15px 0 20px 0;
+  }
+
+  // ul.navbar-nav>li>a {
+  //   color: #fff; // need customize
+  // }
+}
+
+// Mobile Menu
+.mobile {
+
+  &__open-btn {
+    font-size: 30px;
+    color: #fbb431;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    right: 50px;
+    top: -10px;
+    display: none;
+
+    @include laptop1 {
+      top: 4px;
+    }
+
+    @include tab1 {
+      right: 25px;
+    }
+
+    @include phone2 {
+      right: 15px;
+    }
+
+    @include laptop1 {
+      display: block !important;
+    }
+  }
+
+  &__close-btn {
+    font-size: 50px;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: 22px;
+    right: 50px;
+    transition: all .3s;
+
+    @include tab1 {
+      right: 25px;
+    }
+
+    @include phone2 {
+      right: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fbb431;
+    }
+  }
+
+  &__nav {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 105;
+    background-color: rgba(255, 255, 255, .9);
+    transition: all .3s linear;
+    overflow-y: hidden;
+
+    ul.nav {
+      display: block;
+    }
+
+    ul.nav>li.nav-item a.active {
+      color: #fbb431 !important;
+    }
+  }
+
+  &__nav-content {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 15%;
+
+    ul li {
+      margin-bottom: 20px;
+
+      @include tab1 {
+        margin-bottom: 15px;
+      }
+
+      @include tab2 {
+        margin-bottom: 10px;
+      }
+
+      @include phone2 {
+        margin-bottom: 5px;
+      }
+    }
+
+    ul li a {
+      font-family: $font-display;
+      font-size: 16px;
+      color: #212226;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all .3s;
+      display: inline-block;
+
+      @include phone2 {
+        font-size: 16px;
+      }
+
+      &:hover,
+      &:focus {
+        color: #fbb431;
+      }
+    }
+  }
+}
+
+
+
+
+
+/*
+  <!-- |==========================================| -->
+  <!-- |=====|| Navbar Start ||===============| -->
+  <header class="header" id="header">
+    <div class="navbar-01">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar2">
+        <div class="container-fluid navbar-01__wrapper">
+          <!-- Mobile Menu Oper Button -->
+          <span class="mobile__open-btn">&#9776;</span>
+          <!-- logo -->
+          <a class="navbar-brand smooth-scroll" href="#site-body">
+            <img src="assets/img/logo/logo-2.png" alt="Logo">
+          </a>
+          <!-- Main Menu -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+          </button>
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll active" href="#site-body">Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll" href="#oily2">Demo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll" href="#oily3">Feature</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div class="mobile__nav">
+            <span class="mobile__close-btn">&times;</span>
+            <div class="mobile__nav-content">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll active" href="#site-body">Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll" href="#oily2">Demo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link smooth-scroll" href="#oily3">Feature</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- |=====|| Navbar End ||=================| -->
+  <!-- |==========================================| -->
+*/
+
+
+
+
+
+/*
+  //////////////////////////////////////////////////////
+  // Navbar2 for mobile
+  $('.mobile__open-btn').click(function () {
+    $('.mobile__nav').css("height", "100%");
+  });
+  $('.mobile__close-btn, .mobile__nav a').click(function () {
+    $('.mobile__nav').css("height", "0%");
+  });
+*/

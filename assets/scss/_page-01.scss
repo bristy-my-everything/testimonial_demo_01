@@ -1,0 +1,120 @@
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//==| 
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+.testimonial {
+  background: #F8F9FA;
+
+  &__body {
+  }
+
+  &__item {
+    position: relative;
+    padding: 80px 40px 40px;
+    transition: 0.5s;
+    text-align: center;
+    background: #fff;
+    margin: 40px 0px;
+
+    @include phone2 {
+      padding: 80px 10px 40px;
+    }
+
+    .imgbox {
+
+      img {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      transition: 0.5s;
+      font-size: 15px;
+    }
+
+    h4 {
+      margin: 20px 0 0;
+      padding: 0;
+      transition: 0.5s;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #555;
+
+      span {
+        font-weight: normal;
+        font-size: 14px;
+        color: #c5c5c5;
+        transition: 0.5s;
+      }
+    }
+
+    &:hover {
+      background: #E49504;
+    }
+
+    &::before {
+      font-family:"Font Awesome 5 Free";
+      font-weight: 900;
+      content:"\f10e";
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 60px;
+      color: #f1f1f1;
+      pointer-events: none;
+      transition: 0.5s;
+
+      @include phone1 {
+        display: none;
+      }
+    }
+
+    &::after {
+      font-family:"Font Awesome 5 Free";
+      font-weight: 900;
+      content:"\f10e";
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      font-size: 60px;
+      color: #f1f1f1;
+      pointer-events: none;
+      transition: 0.5s;
+      transform: rotate(180deg) translateY(0px);
+
+      @include phone1 {
+        display: none;
+      }
+    }
+  }
+}
+
+.testimonial .testimonial__item:hover p,
+.testimonial .testimonial__item:hover h4,
+.testimonial .testimonial__item:hover h4 span {
+  color: #fff;
+}
+
+.testimonial .testimonial__item:hover::before {
+  color: #222;
+  transform: translateY(-40px);
+}
+
+.testimonial .testimonial__item:hover::after {
+  color: #222;
+  transform: translateY(-40px);
+  transform: rotate(180deg) translateY(-40px);
+}

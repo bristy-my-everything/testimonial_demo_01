@@ -1,0 +1,635 @@
+/***************************************************
+================ Master Stylesheet =================
+====================================================
+Template Name : 
+Template URL :
+Description : This is Responsive html5 template.
+Author : 
+Author URL :
+Version : 1.0
+Tags : 
+****************************************************
+*
+*
+**/
+/***************************************************
+=================== CSS INDEX ======================
+====================================================
+01. Google Font
+02. Reset CSS
+03. Animations
+04. Preloader
+05. Scroll To Top
+06. Navbar
+07. Input
+08. Button
+09. Header
+10. Heading
+11. Footer
+****************************************************
+*
+*
+**/
+/*==================================================
+===| 01. Google Font
+===================================================*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,500,700");
+/*==================================================
+===| 02. Reset CSS
+===================================================*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+html,
+body {
+  min-height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #404040; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  border: none; }
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 solid; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+i {
+  font-style: normal; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+section {
+  background-color: #fff; }
+
+.vh-100 {
+  height: 100vh; }
+
+.content__box {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 1199px) {
+    .content__box {
+      padding-top: 80px;
+      padding-bottom: 80px; } }
+  @media only screen and (max-width: 767px) {
+    .content__box {
+      padding-top: 60px;
+      padding-bottom: 60px; } }
+
+.footer-content-box {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.gray-bg {
+  background-color: #F8F9FA; }
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff; }
+
+::selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff; }
+
+.is-sticky {
+  position: relative;
+  z-index: 100000; }
+
+/*==================================================
+===| 03. Animations
+===================================================*/
+@-webkit-keyframes fadeInLeft30 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes fadeInLeft30 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.fadeInLeft30 {
+  -webkit-animation-name: fadeInLeft30;
+  animation-name: fadeInLeft30; }
+
+@-webkit-keyframes fadeInRight30 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes fadeInRight30 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.fadeInRight30 {
+  -webkit-animation-name: fadeInRight30;
+  animation-name: fadeInRight30; }
+
+/*==================================================
+===| 04. Preloader
+===================================================*/
+.loader {
+  background: #000;
+  background: radial-gradient(#222, #000);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999; }
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px; }
+
+.loader-line-wrap {
+  animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px; }
+
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px; }
+
+.loader-line-wrap:nth-child(1) {
+  animation-delay: -50ms; }
+
+.loader-line-wrap:nth-child(2) {
+  animation-delay: -100ms; }
+
+.loader-line-wrap:nth-child(3) {
+  animation-delay: -150ms; }
+
+.loader-line-wrap:nth-child(4) {
+  animation-delay: -200ms; }
+
+.loader-line-wrap:nth-child(5) {
+  animation-delay: -250ms; }
+
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: #eb4747;
+  height: 90px;
+  width: 90px;
+  top: 7px; }
+
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: #ebeb47;
+  height: 76px;
+  width: 76px;
+  top: 14px; }
+
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: #47eb47;
+  height: 62px;
+  width: 62px;
+  top: 21px; }
+
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: #47ebeb;
+  height: 48px;
+  width: 48px;
+  top: 28px; }
+
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: #4747eb;
+  height: 34px;
+  width: 34px;
+  top: 35px; }
+
+@keyframes spin {
+  0%,
+  15% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+/*==================================================
+===| 05. Scroll To Top
+===================================================*/
+.scrollToTop {
+  position: fixed;
+  display: none;
+  bottom: 15px;
+  right: 30px;
+  z-index: 100000;
+  color: #fff;
+  background-color: #000;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .3s; }
+  .scrollToTop:hover {
+    color: #fff;
+    background-color: #e49504; }
+  @media only screen and (max-width: 991px) {
+    .scrollToTop {
+      right: 20px; } }
+  @media only screen and (max-width: 767px) {
+    .scrollToTop {
+      bottom: 10px;
+      right: 10px; } }
+  @media only screen and (max-width: 575px) {
+    .scrollToTop {
+      height: 40px;
+      width: 40px;
+      line-height: 40px; } }
+  .scrollToTop i::before {
+    font-size: 20px;
+    padding: 0;
+    margin: 0; }
+
+/*==================================================
+===| 07. Input
+===================================================*/
+.form-control {
+  border: 1px solid #e9e8e8;
+  margin-bottom: 20px;
+  padding: 20px 15px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif; }
+  .form-control:focus {
+    border-color: #dbdada;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    color: #444; }
+
+.textarea_parent {
+  position: relative;
+  overflow: hidden; }
+
+.textarea_parent > textarea:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 none; }
+
+.textarea_parent > textarea {
+  min-height: 100px; }
+
+/*==================================================
+===| 08. Button
+===================================================*/
+.btn2 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
+  .btn2:hover {
+    color: #333; }
+
+.btn2:hover,
+.btn2:focus {
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent; }
+
+.btn2:focus,
+.btn2.focus {
+  outline: 0; }
+
+/*==================================================
+===| 09. Header
+===================================================*/
+/*==================================================
+===| 10. Heading
+===================================================*/
+/*==================================================
+===| 11. Footer
+===================================================*/
+.testimonial {
+  background: #F8F9FA; }
+  .testimonial__item {
+    position: relative;
+    padding: 80px 40px 40px;
+    transition: 0.5s;
+    text-align: center;
+    background: #fff;
+    margin: 40px 0px; }
+    @media only screen and (max-width: 479px) {
+      .testimonial__item {
+        padding: 80px 10px 40px; } }
+    .testimonial__item .imgbox img {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden; }
+    .testimonial__item p {
+      margin: 0;
+      padding: 0;
+      transition: 0.5s;
+      font-size: 15px; }
+    .testimonial__item h4 {
+      margin: 20px 0 0;
+      padding: 0;
+      transition: 0.5s;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #555; }
+      .testimonial__item h4 span {
+        font-weight: normal;
+        font-size: 14px;
+        color: #c5c5c5;
+        transition: 0.5s; }
+    .testimonial__item:hover {
+      background: #E49504; }
+    .testimonial__item::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f10e";
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 60px;
+      color: #f1f1f1;
+      pointer-events: none;
+      transition: 0.5s; }
+      @media only screen and (max-width: 575px) {
+        .testimonial__item::before {
+          display: none; } }
+    .testimonial__item::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f10e";
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      font-size: 60px;
+      color: #f1f1f1;
+      pointer-events: none;
+      transition: 0.5s;
+      transform: rotate(180deg) translateY(0px); }
+      @media only screen and (max-width: 575px) {
+        .testimonial__item::after {
+          display: none; } }
+
+.testimonial .testimonial__item:hover p,
+.testimonial .testimonial__item:hover h4,
+.testimonial .testimonial__item:hover h4 span {
+  color: #fff; }
+
+.testimonial .testimonial__item:hover::before {
+  color: #222;
+  transform: translateY(-40px); }
+
+.testimonial .testimonial__item:hover::after {
+  color: #222;
+  transform: translateY(-40px);
+  transform: rotate(180deg) translateY(-40px); }
+
+/*==================================================
+===| Author CSS End
+===================================================*/
+/*==================================================
+===| Helper classes
+===================================================*/
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit; }
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+.invisible {
+  visibility: hidden; }
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+Print styles.
+Inlined to avoid the additional HTTP request:
+https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+ /*
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre {
+    white-space: pre-wrap !important; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+ /*
+* Printing Tables:
+* http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*==================================================
+===| Style CSS End
+===================================================*/
+
+/*# sourceMappingURL=style.css.map */

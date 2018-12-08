@@ -1,0 +1,91 @@
+/***************************************************
+================ Master Stylesheet =================
+====================================================
+Template Name : 
+Template URL :
+Description : This is Responsive html5 template.
+Author : 
+Author URL :
+Version : 1.0
+Tags : 
+****************************************************
+*
+*
+**/
+/***************************************************
+=================== CSS INDEX ======================
+====================================================
+01. Google Font
+02. Reset CSS
+03. Animations
+04. Preloader
+05. Scroll To Top
+06. Navbar
+07. Input
+08. Button
+09. Header
+10. Heading
+11. Footer
+****************************************************
+*
+*
+**/
+////////////////////////////////////////////////////
+// function
+@import "b-01-function/functions";
+@import "b-01-function/variables";
+@import "b-01-function/mixins";
+////////////////////////////////////////////////////
+// reset
+@import "b-02-reset/typography";
+@import "b-02-reset/base";
+@import "b-02-reset/utilities";
+@import "b-02-reset/animations";
+////////////////////////////////////////////////////
+// web-parts
+@import "b-03-web-parts/preloader"; 
+@import "b-03-web-parts/scrollToTop"; 
+// @import "b-03-web-parts/navbar";
+// @import "b-03-web-parts/navbar2";
+// @import "b-03-web-parts/scrollbar";
+////////////////////////////////////////////////////
+// All Project SCSS
+
+@import "b-01-input";
+@import "b-02-button";
+@import "b-03-header";
+@import "b-04-heading";
+@import "b-05-footer";
+
+@import "page-01";
+@import "page-02";
+@import "page-03";
+@import "page-04";
+@import "page-05";
+
+/*==================================================
+===| Author CSS End
+===================================================*/
+@import "b-02-reset/helper-classes";
+/*==================================================
+===| Style CSS End
+===================================================*/
+
+////////////////////////////////////////////////////
+// d-table h-100(vh-100) w-100
+// d-table-cell align-middle text-center
+// d-flex align-items-center justify-content-center
+// sass --watch assets\scss\main.scss:assets\css\style.css
+// sass --watch assets\scss\main.scss:assets\css\custom\main.css
+// sass --watch assets\scss\main.scss:assets\css\main.css
+
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+//==| 
+//////////////////////////////////////////////////==|
+//////////////////////////////////////////////////==|
+
+// /*==================================================
+// ===| 
+// ===================================================*/
